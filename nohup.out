@@ -1,0 +1,646 @@
+2.3.2
+1.3.1
+GeForce RTX 2070 SUPER
+True
+model_set
+ 0    277242
+1     18703
+Name: smishing, dtype: int64
+merged_ts 20200103T112827_8438_256_49980
+{'step': 170, 'num_workers': 2}
+{'input_size': 8437, 'vocab_size': 49980, 'embed_size': 128, 'hidden_size': 128, 'num_layers': 5}
+morphs_256_idx 8437 smishing
+morphs_256_idx 8437 smishing
+236755 59190
+
+CV 0
+RDModel(
+  (relu): ReLU()
+  (dropout): Dropout(p=0.25, inplace=False)
+  (embed): Embedding(49980, 128)
+  (lstm): LSTM(128, 128, num_layers=5, batch_first=True, dropout=0.3)
+  (fc): Sequential(
+    (0): Linear(in_features=8437, out_features=512, bias=True)
+    (1): ReLU()
+    (2): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): Dropout(p=0.25, inplace=False)
+    (4): Linear(in_features=512, out_features=256, bias=True)
+    (5): ReLU()
+    (6): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (7): Dropout(p=0.25, inplace=False)
+    (8): Linear(in_features=256, out_features=128, bias=True)
+    (9): ReLU()
+    (10): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (11): Dropout(p=0.25, inplace=False)
+  )
+  (output): Linear(in_features=256, out_features=2, bias=True)
+)
+model_ts 20200103T184537
+Epoch: 1
+HBox(children=(IntProgress(value=0, description='CV 0 Epoch', style=ProgressStyle(description_width='initial')), HTML(value='')))
+/home/aiden/anaconda3/lib/python3.7/site-packages/sklearn/externals/joblib/__init__.py:15: DeprecationWarning: sklearn.externals.joblib is deprecated in 0.21 and will be removed in 0.23. Please import this functionality directly from joblib, which can be installed with: pip install joblib. If this warning is raised when loading pickled models, you may need to re-serialize those models with scikit-learn 0.21+.
+  warnings.warn(msg, category=DeprecationWarning)
+[20200103T184803] CV 0 Epoch 1
+	Train loss: 5.684377538273111e-05	Valid loss: 0.006979542784392834	0.008144340477883816
+	 {'auc': 0.9999467053799487, 'confusion_matrix': array([[55439,    10],
+       [   20,  3691]]), 'precision': 0.9972980275601189, 'recall': 0.9946106170843438}
+Validation loss decreased (inf --> -0.99994671).  Saving model ...
+[20200103T185029] CV 0 Epoch 2
+	Train loss: 0.0001289790525333956	Valid loss: 0.005430668592453003	0.023750124499201775
+	 {'auc': 0.9999026394548755, 'confusion_matrix': array([[55434,    15],
+       [   12,  3699]]), 'precision': 0.9959612277867528, 'recall': 0.9967663702506063}
+EarlyStopping 2 / 18 counter: 1 out of 5
+[20200103T185255] CV 0 Epoch 3
+	Train loss: 2.4029292035265826e-05	Valid loss: 0.005958888679742813	0.004032512195408344
+	 {'auc': 0.9999579897557987, 'confusion_matrix': array([[55439,    10],
+       [    9,  3702]]), 'precision': 0.9973060344827587, 'recall': 0.9975747776879548}
+Validation loss decreased (-0.99994671 --> -0.99995799).  Saving model ...
+[20200103T185521] CV 0 Epoch 4
+	Train loss: 2.6372224965598434e-05	Valid loss: 0.006940842606127262	0.0037995711900293827
+	 {'auc': 0.9999571077083325, 'confusion_matrix': array([[55438,    11],
+       [   11,  3700]]), 'precision': 0.9970358393963891, 'recall': 0.9970358393963891}
+EarlyStopping 4 / 18 counter: 1 out of 5
+[20200103T185747] CV 0 Epoch 5
+	Train loss: 3.7517565942835063e-06	Valid loss: 0.006727032829076052	0.0005577134434133768
+	 {'auc': 0.9999685646058631, 'confusion_matrix': array([[55438,    11],
+       [   10,  3701]]), 'precision': 0.9970366379310345, 'recall': 0.9973053085421719}
+Validation loss decreased (-0.99995799 --> -0.99996856).  Saving model ...
+[20200103T190014] CV 0 Epoch 6
+	Train loss: 2.34831495617982e-05	Valid loss: 0.009836036711931229	0.0023874605540186167
+	 {'auc': 0.9998383131667881, 'confusion_matrix': array([[55440,     9],
+       [   14,  3697]]), 'precision': 0.9975715056664868, 'recall': 0.9962274319590407}
+EarlyStopping 6 / 18 counter: 1 out of 5
+[20200103T190240] CV 0 Epoch 7
+	Train loss: 5.910026629862841e-06	Valid loss: 0.008587917312979698	0.0006881792796775699
+	 {'auc': 0.9999073291287321, 'confusion_matrix': array([[55443,     6],
+       [   11,  3700]]), 'precision': 0.9983810037776578, 'recall': 0.9970358393963891}
+EarlyStopping 7 / 18 counter: 2 out of 5
+[20200103T190506] CV 0 Epoch 8
+	Train loss: 1.1777307008742355e-05	Valid loss: 0.009955684654414654	0.0011829730356112123
+	 {'auc': 0.9999914516722135, 'confusion_matrix': array([[55445,     4],
+       [   18,  3693]]), 'precision': 0.9989180416553962, 'recall': 0.9951495553759094}
+Validation loss decreased (-0.99996856 --> -0.99999145).  Saving model ...
+[20200103T190732] CV 0 Epoch 9
+	Train loss: 1.9163704564562067e-05	Valid loss: 0.006564472336322069	0.002919306280091405
+	 {'auc': 0.9999556594981672, 'confusion_matrix': array([[55441,     8],
+       [    9,  3702]]), 'precision': 0.997843665768194, 'recall': 0.9975747776879548}
+EarlyStopping 9 / 18 counter: 1 out of 5
+[20200103T190958] CV 0 Epoch 10
+	Train loss: 8.736038807910518e-07	Valid loss: 0.011204187758266926	7.797119178576395e-05
+	 {'auc': 0.9998426869558772, 'confusion_matrix': array([[55447,     2],
+       [   20,  3691]]), 'precision': 0.999458434876794, 'recall': 0.9946106170843438}
+EarlyStopping 10 / 18 counter: 2 out of 5
+[20200103T191224] CV 0 Epoch 11
+	Train loss: 1.0359663974668365e-05	Valid loss: 0.009352046065032482	0.0011077430099248886
+	 {'auc': 0.9999176123928573, 'confusion_matrix': array([[55433,    16],
+       [   11,  3700]]), 'precision': 0.9956942949407965, 'recall': 0.9970358393963891}
+EarlyStopping 11 / 18 counter: 3 out of 5
+[20200103T191451] CV 0 Epoch 12
+	Train loss: 1.7538934571348364e-06	Valid loss: 0.006085531786084175	0.000288207083940506
+	 {'auc': 0.9999795428164768, 'confusion_matrix': array([[55437,    12],
+       [    7,  3704]]), 'precision': 0.9967707212055974, 'recall': 0.9981137159795204}
+EarlyStopping 12 / 18 counter: 4 out of 5
+[20200103T191717] CV 0 Epoch 13
+	Train loss: 7.257924153236672e-06	Valid loss: 0.010857422836124897	0.0006684757536277175
+	 {'auc': 0.9998346732023128, 'confusion_matrix': array([[55443,     6],
+       [   18,  3693]]), 'precision': 0.9983779399837794, 'recall': 0.9951495553759094}
+EarlyStopping 13 / 18 counter: 5 out of 5
+[20200103T191943] CV 0 Epoch 14
+	Train loss: 2.6961599814967485e-06	Valid loss: 0.008493967354297638	0.00031742057763040066
+	 {'auc': 0.9999809764473451, 'confusion_matrix': array([[55437,    12],
+       [   14,  3697]]), 'precision': 0.9967646265839849, 'recall': 0.9962274319590407}
+EarlyStopping 14 / 18 counter: 6 out of 5
+[20200103T192209] CV 0 Epoch 15
+	Train loss: 1.2241158628967241e-06	Valid loss: 0.010367250069975853	0.00011807527334894985
+	 {'auc': 0.9999407716060844, 'confusion_matrix': array([[55444,     5],
+       [   17,  3694]]), 'precision': 0.9986482833198161, 'recall': 0.9954190245216923}
+EarlyStopping 15 / 18 counter: 7 out of 5
+[20200103T192435] CV 0 Epoch 16
+	Train loss: 1.079116827895632e-06	Valid loss: 0.01121588610112667	9.62132471613586e-05
+	 {'auc': 0.9997851886385346, 'confusion_matrix': array([[55439,    10],
+       [   12,  3699]]), 'precision': 0.9973038554866541, 'recall': 0.9967663702506063}
+EarlyStopping 16 / 18 counter: 8 out of 5
+[20200103T192701] CV 0 Epoch 17
+	Train loss: 7.448478527294355e-07	Valid loss: 0.011997408233582973	6.20840655756183e-05
+	 {'auc': 0.9999620136417607, 'confusion_matrix': array([[55444,     5],
+       [   17,  3694]]), 'precision': 0.9986482833198161, 'recall': 0.9954190245216923}
+EarlyStopping 17 / 18 counter: 9 out of 5
+[20200103T192927] CV 0 Epoch 18
+	Train loss: 5.920355761190876e-07	Valid loss: 0.012216589413583279	4.846161027671769e-05
+	 {'auc': 0.9999078612730713, 'confusion_matrix': array([[55446,     3],
+       [   17,  3694]]), 'precision': 0.9991885312415472, 'recall': 0.9954190245216923}
+EarlyStopping 18 / 18 counter: 10 out of 5
+[20200103T193154] CV 0 Epoch 19
+	Train loss: 0.00012191558926133439	Valid loss: 0.011904806829988956	0.010240870527923107
+	 {'auc': 0.9999221198255019, 'confusion_matrix': array([[55442,     7],
+       [   13,  3698]]), 'precision': 0.998110661268556, 'recall': 0.9964969011048235}
+EarlyStopping 19 / 18 counter: 11 out of 5
+	Early stopping epoch 19, valid loss 0.011904806829988956
+
+Best_Epoch 8
+END<valid> CV 0 eval summary
+ {'auc': 0.9999913605865483, 'confusion_matrix': array([[55445,     4],
+       [   18,  3633]]), 'precision': 0.9989001924663184, 'recall': 0.9950698438783895}
+END<train> CV 0 eval summary
+ {'auc': 0.999999996982992, 'confusion_matrix': array([[221753,      0],
+       [     3,  14944]]), 'precision': 1.0, 'recall': 0.9997992908275908}
+train_auc - valid_auc: 8.636396443773009e-06
+morphs_256_idx 8437 smishing
+morphs_256_idx 8437 smishing
+236755 59190
+
+CV 1
+model_ts 20200103T193234
+Epoch: 1
+HBox(children=(IntProgress(value=0, description='CV 1 Epoch', style=ProgressStyle(description_width='initial')), HTML(value='')))
+[20200103T193500] CV 1 Epoch 1
+	Train loss: 0.0004310687945690006	Valid loss: 0.004553016275167465	0.09467763453722
+	 {'auc': 0.9999526610227584, 'confusion_matrix': array([[55447,     2],
+       [   21,  3690]]), 'precision': 0.9994582881906826, 'recall': 0.994341147938561}
+Validation loss decreased (inf --> -0.99995266).  Saving model ...
+[20200103T193726] CV 1 Epoch 2
+	Train loss: 3.065869168494828e-05	Valid loss: 0.00082340621156618	0.03723398223519325
+	 {'auc': 0.9999531275602612, 'confusion_matrix': array([[55439,    10],
+       [    8,  3703]]), 'precision': 0.9973067600323189, 'recall': 0.9978442468337375}
+Validation loss decreased (-0.99995266 --> -0.99995313).  Saving model ...
+[20200103T193953] CV 1 Epoch 3
+	Train loss: 0.0003638443595264107	Valid loss: 0.0011949902400374413	0.30447474122047424
+	 {'auc': 0.9999561357552015, 'confusion_matrix': array([[55441,     8],
+       [    6,  3705]]), 'precision': 0.9978454080258551, 'recall': 0.9983831851253031}
+Validation loss decreased (-0.99995313 --> -0.99995614).  Saving model ...
+[20200103T194219] CV 1 Epoch 4
+	Train loss: 0.0005627768114209175	Valid loss: 0.0012700153747573495	0.44312599301338196
+	 {'auc': 0.9999656997740097, 'confusion_matrix': array([[55437,    12],
+       [    6,  3705]]), 'precision': 0.9967715899919289, 'recall': 0.9983831851253031}
+Validation loss decreased (-0.99995614 --> -0.99996570).  Saving model ...
+[20200103T194446] CV 1 Epoch 5
+	Train loss: 6.398015557351755e-06	Valid loss: 0.0026450692676007748	0.0024188461247831583
+	 {'auc': 0.9998797936965331, 'confusion_matrix': array([[55444,     5],
+       [    9,  3702]]), 'precision': 0.9986512004316158, 'recall': 0.9975747776879548}
+EarlyStopping 5 / 18 counter: 1 out of 5
+[20200103T194712] CV 1 Epoch 6
+	Train loss: 7.217571692308411e-05	Valid loss: 0.0013635114300996065	0.0529337078332901
+	 {'auc': 0.9999693105798911, 'confusion_matrix': array([[55442,     7],
+       [    8,  3703]]), 'precision': 0.9981132075471698, 'recall': 0.9978442468337375}
+Validation loss decreased (-0.99996570 --> -0.99996931).  Saving model ...
+[20200103T194938] CV 1 Epoch 7
+	Train loss: 8.792272637947462e-06	Valid loss: 0.0004144841223023832	0.021212568506598473
+	 {'auc': 0.9999682608705096, 'confusion_matrix': array([[55400,    49],
+       [    6,  3705]]), 'precision': 0.9869472562599894, 'recall': 0.9983831851253031}
+EarlyStopping 7 / 18 counter: 1 out of 5
+[20200103T195204] CV 1 Epoch 8
+	Train loss: 5.024085567129077e-06	Valid loss: 0.0027587050572037697	0.0018211753340438008
+	 {'auc': 0.9998778109121459, 'confusion_matrix': array([[55443,     6],
+       [    6,  3705]]), 'precision': 0.9983831851253031, 'recall': 0.9983831851253031}
+EarlyStopping 8 / 18 counter: 2 out of 5
+[20200103T195431] CV 1 Epoch 9
+	Train loss: 2.509877504053293e-06	Valid loss: 0.0025052926503121853	0.0010018300963565707
+	 {'auc': 0.9999564224813751, 'confusion_matrix': array([[55441,     8],
+       [    6,  3705]]), 'precision': 0.9978454080258551, 'recall': 0.9983831851253031}
+EarlyStopping 9 / 18 counter: 3 out of 5
+[20200103T195657] CV 1 Epoch 10
+	Train loss: 4.0716845433053095e-06	Valid loss: 9.878803393803537e-05	0.041216373443603516
+	 {'auc': 0.999976896674078, 'confusion_matrix': array([[55441,     8],
+       [    5,  3706]]), 'precision': 0.9978459881529348, 'recall': 0.998652654271086}
+Validation loss decreased (-0.99996931 --> -0.99997690).  Saving model ...
+[20200103T195923] CV 1 Epoch 11
+	Train loss: 3.085449407080887e-06	Valid loss: 0.00210375664755702	0.0014666379429399967
+	 {'auc': 0.9999713759802943, 'confusion_matrix': array([[55440,     9],
+       [    6,  3705]]), 'precision': 0.9975767366720517, 'recall': 0.9983831851253031}
+EarlyStopping 11 / 18 counter: 1 out of 5
+[20200103T200149] CV 1 Epoch 12
+	Train loss: 1.6860865343915066e-06	Valid loss: 0.0033881457056850195	0.0004976428463123739
+	 {'auc': 0.999937245846102, 'confusion_matrix': array([[55444,     5],
+       [    6,  3705]]), 'precision': 0.9986522911051213, 'recall': 0.9983831851253031}
+EarlyStopping 12 / 18 counter: 2 out of 5
+[20200103T200415] CV 1 Epoch 13
+	Train loss: 1.1552906471479218e-06	Valid loss: 0.0031419245060533285	0.00036770160659216344
+	 {'auc': 0.9999508580497005, 'confusion_matrix': array([[55444,     5],
+       [    6,  3705]]), 'precision': 0.9986522911051213, 'recall': 0.9983831851253031}
+EarlyStopping 13 / 18 counter: 3 out of 5
+[20200103T200642] CV 1 Epoch 14
+	Train loss: 1.0823824823091854e-06	Valid loss: 0.0029255265835672617	0.0003699786902870983
+	 {'auc': 0.9999688926400447, 'confusion_matrix': array([[55444,     5],
+       [    7,  3704]]), 'precision': 0.998651927743327, 'recall': 0.9981137159795204}
+EarlyStopping 14 / 18 counter: 4 out of 5
+[20200103T200908] CV 1 Epoch 15
+	Train loss: 1.0306281410521478e-06	Valid loss: 0.0029711469542235136	0.0003468788927420974
+	 {'auc': 0.9999492640465658, 'confusion_matrix': array([[55442,     7],
+       [    8,  3703]]), 'precision': 0.9981132075471698, 'recall': 0.9978442468337375}
+EarlyStopping 15 / 18 counter: 5 out of 5
+[20200103T201134] CV 1 Epoch 16
+	Train loss: 4.449263144579163e-07	Valid loss: 0.004168707877397537	0.00010673003271222115
+	 {'auc': 0.9995483236605287, 'confusion_matrix': array([[55445,     4],
+       [    8,  3703]]), 'precision': 0.9989209603452927, 'recall': 0.9978442468337375}
+EarlyStopping 16 / 18 counter: 6 out of 5
+[20200103T201400] CV 1 Epoch 17
+	Train loss: 6.430461780837504e-07	Valid loss: 0.0035042697563767433	0.00018350362370256335
+	 {'auc': 0.9996522643283496, 'confusion_matrix': array([[55443,     6],
+       [    8,  3703]]), 'precision': 0.9983823132919925, 'recall': 0.9978442468337375}
+EarlyStopping 17 / 18 counter: 7 out of 5
+[20200103T201626] CV 1 Epoch 18
+	Train loss: 4.5032194861960306e-07	Valid loss: 0.0033632898703217506	0.000133893292513676
+	 {'auc': 0.9997613514879987, 'confusion_matrix': array([[55443,     6],
+       [    8,  3703]]), 'precision': 0.9983823132919925, 'recall': 0.9978442468337375}
+EarlyStopping 18 / 18 counter: 8 out of 5
+[20200103T201852] CV 1 Epoch 19
+	Train loss: 4.447058472578647e-06	Valid loss: 0.000986525439657271	0.004507799167186022
+	 {'auc': 0.9999773146139243, 'confusion_matrix': array([[55437,    12],
+       [    6,  3705]]), 'precision': 0.9967715899919289, 'recall': 0.9983831851253031}
+Validation loss decreased (-0.99997690 --> -0.99997731).  Saving model ...
+[20200103T202119] CV 1 Epoch 20
+	Train loss: 8.230487651417207e-07	Valid loss: 0.0038131484761834145	0.00021584493515547365
+	 {'auc': 0.9999474173356171, 'confusion_matrix': array([[55444,     5],
+       [    8,  3703]]), 'precision': 0.9986515641855448, 'recall': 0.9978442468337375}
+EarlyStopping 20 / 18 counter: 1 out of 5
+[20200103T202345] CV 1 Epoch 21
+	Train loss: 7.258528285092325e-07	Valid loss: 0.003630036022514105	0.00019995747425127774
+	 {'auc': 0.999974194644374, 'confusion_matrix': array([[55445,     4],
+       [    8,  3703]]), 'precision': 0.9989209603452927, 'recall': 0.9978442468337375}
+EarlyStopping 21 / 18 counter: 2 out of 5
+[20200103T202611] CV 1 Epoch 22
+	Train loss: 7.85313477535965e-06	Valid loss: 0.0024084458127617836	0.003260664874687791
+	 {'auc': 0.999947208365694, 'confusion_matrix': array([[55445,     4],
+       [    8,  3703]]), 'precision': 0.9989209603452927, 'recall': 0.9978442468337375}
+EarlyStopping 22 / 18 counter: 3 out of 5
+[20200103T202837] CV 1 Epoch 23
+	Train loss: 3.789008928833937e-07	Valid loss: 0.0012051973026245832	0.0003143890935461968
+	 {'auc': 0.9999759198611814, 'confusion_matrix': array([[55437,    12],
+       [    5,  3706]]), 'precision': 0.9967724583109199, 'recall': 0.998652654271086}
+EarlyStopping 23 / 18 counter: 4 out of 5
+[20200103T203103] CV 1 Epoch 24
+	Train loss: 5.7114298215310555e-06	Valid loss: 0.002785532036796212	0.0020503909327089787
+	 {'auc': 0.9999547507219898, 'confusion_matrix': array([[55444,     5],
+       [    6,  3705]]), 'precision': 0.9986522911051213, 'recall': 0.9983831851253031}
+EarlyStopping 24 / 18 counter: 5 out of 5
+	Early stopping epoch 24, valid loss 0.002785532036796212
+
+Best_Epoch 19
+END<valid> CV 1 eval summary
+ {'auc': 0.9999772480626881, 'confusion_matrix': array([[55437,    12],
+       [    6,  3645]]), 'precision': 0.9967186218211649, 'recall': 0.9983566146261298}
+END<train> CV 1 eval summary
+ {'auc': 1.0, 'confusion_matrix': array([[221735,     18],
+       [     0,  14947]]), 'precision': 0.9987971934513866, 'recall': 1.0}
+train_auc - valid_auc: 2.275193731193781e-05
+morphs_256_idx 8437 smishing
+morphs_256_idx 8437 smishing
+236756 59189
+
+CV 2
+model_ts 20200103T203144
+Epoch: 1
+HBox(children=(IntProgress(value=0, description='CV 2 Epoch', style=ProgressStyle(description_width='initial')), HTML(value='')))
+[20200103T203410] CV 2 Epoch 1
+	Train loss: 6.300523818936199e-05	Valid loss: 0.0031437838915735483	0.02004121243953705
+	 {'auc': 0.9993195171757696, 'confusion_matrix': array([[55448,     0],
+       [   13,  3699]]), 'precision': 1.0, 'recall': 0.9964978448275862}
+Validation loss decreased (inf --> -0.99931952).  Saving model ...
+[20200103T203636] CV 2 Epoch 2
+	Train loss: 1.232671183970524e-05	Valid loss: 0.0014224423794075847	0.008665877394378185
+	 {'auc': 0.9999389183839223, 'confusion_matrix': array([[55446,     2],
+       [    6,  3706]]), 'precision': 0.9994606256742179, 'recall': 0.9983836206896551}
+Validation loss decreased (-0.99931952 --> -0.99993892).  Saving model ...
+[20200103T203902] CV 2 Epoch 3
+	Train loss: 1.6208085071411915e-05	Valid loss: 0.003394130850210786	0.004775327164679766
+	 {'auc': 0.9999882228891686, 'confusion_matrix': array([[55446,     2],
+       [    9,  3703]]), 'precision': 0.9994601889338731, 'recall': 0.9975754310344828}
+Validation loss decreased (-0.99993892 --> -0.99998822).  Saving model ...
+[20200103T204128] CV 2 Epoch 4
+	Train loss: 1.2572321793413721e-05	Valid loss: 0.0008665955974720418	0.014507714658975601
+	 {'auc': 0.9999477973732145, 'confusion_matrix': array([[55446,     2],
+       [    6,  3706]]), 'precision': 0.9994606256742179, 'recall': 0.9983836206896551}
+EarlyStopping 4 / 18 counter: 1 out of 5
+[20200103T204354] CV 2 Epoch 5
+	Train loss: 3.770824696402997e-05	Valid loss: 0.0010349529329687357	0.03643474727869034
+	 {'auc': 0.99985269380227, 'confusion_matrix': array([[55446,     2],
+       [    5,  3707]]), 'precision': 0.9994607710973308, 'recall': 0.9986530172413793}
+EarlyStopping 5 / 18 counter: 2 out of 5
+[20200103T204620] CV 2 Epoch 6
+	Train loss: 0.00019318837439641356	Valid loss: 3.558925163815729e-05	5.42827844619751
+	 {'auc': 0.999964139086202, 'confusion_matrix': array([[55446,     2],
+       [    3,  3709]]), 'precision': 0.9994610617084344, 'recall': 0.9991918103448276}
+EarlyStopping 6 / 18 counter: 3 out of 5
+[20200103T204846] CV 2 Epoch 7
+	Train loss: 2.031992880802136e-05	Valid loss: 0.00020960273104719818	0.09694496542215347
+	 {'auc': 0.9996653094744875, 'confusion_matrix': array([[55444,     4],
+       [    3,  3709]]), 'precision': 0.9989227040129276, 'recall': 0.9991918103448276}
+EarlyStopping 7 / 18 counter: 4 out of 5
+[20200103T205112] CV 2 Epoch 8
+	Train loss: 8.657311809656676e-06	Valid loss: 0.001257894211448729	0.006882384419441223
+	 {'auc': 0.9999611850914059, 'confusion_matrix': array([[55446,     2],
+       [    5,  3707]]), 'precision': 0.9994607710973308, 'recall': 0.9986530172413793}
+EarlyStopping 8 / 18 counter: 5 out of 5
+[20200103T205339] CV 2 Epoch 9
+	Train loss: 5.3194012252788525e-06	Valid loss: 0.00027314553153701127	0.019474605098366737
+	 {'auc': 0.9996269998544768, 'confusion_matrix': array([[55446,     2],
+       [    3,  3709]]), 'precision': 0.9994610617084344, 'recall': 0.9991918103448276}
+EarlyStopping 9 / 18 counter: 6 out of 5
+[20200103T205605] CV 2 Epoch 10
+	Train loss: 1.145471856034419e-06	Valid loss: 0.0003700751403812319	0.0030952412635087967
+	 {'auc': 0.9999545337445708, 'confusion_matrix': array([[55446,     2],
+       [    4,  3708]]), 'precision': 0.9994609164420485, 'recall': 0.9989224137931034}
+EarlyStopping 10 / 18 counter: 7 out of 5
+[20200103T205831] CV 2 Epoch 11
+	Train loss: 1.079642402146419e-06	Valid loss: 0.0012476767878979445	0.0008653221884742379
+	 {'auc': 0.9998080632164215, 'confusion_matrix': array([[55446,     2],
+       [    6,  3706]]), 'precision': 0.9994606256742179, 'recall': 0.9983836206896551}
+EarlyStopping 11 / 18 counter: 8 out of 5
+[20200103T210057] CV 2 Epoch 12
+	Train loss: 1.70455462011887e-06	Valid loss: 0.0001779771555447951	0.009577378630638123
+	 {'auc': 0.9999749299125866, 'confusion_matrix': array([[55446,     2],
+       [    3,  3709]]), 'precision': 0.9994610617084344, 'recall': 0.9991918103448276}
+EarlyStopping 12 / 18 counter: 9 out of 5
+[20200103T210323] CV 2 Epoch 13
+	Train loss: 1.3899949408369139e-05	Valid loss: 0.0008213500841520727	0.016923295333981514
+	 {'auc': 0.9999703094371738, 'confusion_matrix': array([[55444,     4],
+       [    5,  3707]]), 'precision': 0.9989221234168688, 'recall': 0.9986530172413793}
+EarlyStopping 13 / 18 counter: 10 out of 5
+[20200103T210549] CV 2 Epoch 14
+	Train loss: 1.771797428773425e-06	Valid loss: 0.00016270592459477484	0.0108895692974329
+	 {'auc': 0.9999668501537942, 'confusion_matrix': array([[55446,     2],
+       [    3,  3709]]), 'precision': 0.9994610617084344, 'recall': 0.9991918103448276}
+EarlyStopping 14 / 18 counter: 11 out of 5
+[20200103T210815] CV 2 Epoch 15
+	Train loss: 7.833073141227942e-07	Valid loss: 0.00036828246084041893	0.002126920036971569
+	 {'auc': 0.9999641633789222, 'confusion_matrix': array([[55446,     2],
+       [    5,  3707]]), 'precision': 0.9994607710973308, 'recall': 0.9986530172413793}
+EarlyStopping 15 / 18 counter: 12 out of 5
+[20200103T211041] CV 2 Epoch 16
+	Train loss: 8.462016580779164e-07	Valid loss: 2.4346412828890607e-05	0.034756727516651154
+	 {'auc': 0.9999718107272922, 'confusion_matrix': array([[55443,     5],
+       [    4,  3708]]), 'precision': 0.9986533800161594, 'recall': 0.9989224137931034}
+EarlyStopping 16 / 18 counter: 13 out of 5
+[20200103T211307] CV 2 Epoch 17
+	Train loss: 1.341832671641896e-06	Valid loss: 0.00018250233551952988	0.007352413609623909
+	 {'auc': 0.999974016506301, 'confusion_matrix': array([[55446,     2],
+       [    4,  3708]]), 'precision': 0.9994609164420485, 'recall': 0.9989224137931034}
+EarlyStopping 17 / 18 counter: 14 out of 5
+[20200103T211533] CV 2 Epoch 18
+	Train loss: 2.1763485165138263e-06	Valid loss: 0.00047534762416034937	0.00457843579351902
+	 {'auc': 0.9999761494071489, 'confusion_matrix': array([[55446,     2],
+       [    5,  3707]]), 'precision': 0.9994607710973308, 'recall': 0.9986530172413793}
+EarlyStopping 18 / 18 counter: 15 out of 5
+[20200103T211759] CV 2 Epoch 19
+	Train loss: 1.6693107681930996e-05	Valid loss: 3.703958645928651e-05	0.4506828784942627
+	 {'auc': 0.9999691968305813, 'confusion_matrix': array([[55437,    11],
+       [    3,  3709]]), 'precision': 0.9970430107526882, 'recall': 0.9991918103448276}
+EarlyStopping 19 / 18 counter: 16 out of 5
+	Early stopping epoch 19, valid loss 3.703958645928651e-05
+
+Best_Epoch 3
+END<valid> CV 2 eval summary
+ {'auc': 0.9999885874342981, 'confusion_matrix': array([[55446,     2],
+       [    8,  3644]]), 'precision': 0.9994514536478333, 'recall': 0.9978094194961665}
+END<train> CV 2 eval summary
+ {'auc': 0.9999998207897248, 'confusion_matrix': array([[221750,      3],
+       [    34,  14913]]), 'precision': 0.9997988736926791, 'recall': 0.9977252960460293}
+train_auc - valid_auc: 1.1233355426742975e-05
+morphs_256_idx 8437 smishing
+morphs_256_idx 8437 smishing
+236757 59188
+
+CV 3
+model_ts 20200103T211839
+Epoch: 1
+HBox(children=(IntProgress(value=0, description='CV 3 Epoch', style=ProgressStyle(description_width='initial')), HTML(value='')))
+[20200103T212106] CV 3 Epoch 1
+	Train loss: 0.00012548953236546367	Valid loss: 0.0001271377841476351	0.9870356917381287
+	 {'auc': 0.9999955592907179, 'confusion_matrix': array([[55417,    31],
+       [    7,  3705]]), 'precision': 0.9917023554603854, 'recall': 0.998114224137931}
+Validation loss decreased (inf --> -0.99999556).  Saving model ...
+[20200103T212333] CV 3 Epoch 2
+	Train loss: 6.467159983003512e-05	Valid loss: 6.784282595617697e-05	0.9532562494277954
+	 {'auc': 0.9999940677176877, 'confusion_matrix': array([[55441,     7],
+       [    5,  3707]]), 'precision': 0.998115239633818, 'recall': 0.9986530172413793}
+EarlyStopping 2 / 18 counter: 1 out of 5
+[20200103T212559] CV 3 Epoch 3
+	Train loss: 1.7354033843730576e-05	Valid loss: 1.724939102132339e-05	1.0060664415359497
+	 {'auc': 0.9999994898528725, 'confusion_matrix': array([[55444,     4],
+       [    4,  3708]]), 'precision': 0.9989224137931034, 'recall': 0.9989224137931034}
+Validation loss decreased (-0.99999556 --> -0.99999949).  Saving model ...
+[20200103T212825] CV 3 Epoch 4
+	Train loss: 2.4577313524787314e-05	Valid loss: 2.4265425508929184e-06	10.128531455993652
+	 {'auc': 0.9999968346585368, 'confusion_matrix': array([[55446,     2],
+       [    7,  3705]]), 'precision': 0.9994604801726463, 'recall': 0.998114224137931}
+EarlyStopping 4 / 18 counter: 1 out of 5
+[20200103T213051] CV 3 Epoch 5
+	Train loss: 5.5136392802523915e-06	Valid loss: 0.00024399394169449806	0.02259744331240654
+	 {'auc': 0.9999923137832776, 'confusion_matrix': array([[55444,     4],
+       [    8,  3704]]), 'precision': 0.9989212513484358, 'recall': 0.9978448275862069}
+EarlyStopping 5 / 18 counter: 2 out of 5
+[20200103T213318] CV 3 Epoch 6
+	Train loss: 2.752704494923819e-05	Valid loss: 1.3434631000563968e-05	2.048961639404297
+	 {'auc': 0.9999864398034941, 'confusion_matrix': array([[55432,    16],
+       [    7,  3705]]), 'precision': 0.9957000806234884, 'recall': 0.998114224137931}
+EarlyStopping 6 / 18 counter: 3 out of 5
+[20200103T213544] CV 3 Epoch 7
+	Train loss: 1.4950198419683147e-05	Valid loss: 4.225351403874811e-06	3.5382142066955566
+	 {'auc': 0.9999980420067388, 'confusion_matrix': array([[55445,     3],
+       [    7,  3705]]), 'precision': 0.9991909385113269, 'recall': 0.998114224137931}
+EarlyStopping 7 / 18 counter: 4 out of 5
+[20200103T213810] CV 3 Epoch 8
+	Train loss: 3.3730818813637597e-06	Valid loss: 3.4102123436241527e-07	9.891119956970215
+	 {'auc': 0.999987642293152, 'confusion_matrix': array([[55446,     2],
+       [    7,  3705]]), 'precision': 0.9994604801726463, 'recall': 0.998114224137931}
+EarlyStopping 8 / 18 counter: 5 out of 5
+[20200103T214037] CV 3 Epoch 9
+	Train loss: 3.0631301797257038e-06	Valid loss: 2.170435209336574e-06	1.4112976789474487
+	 {'auc': 0.9999772037112125, 'confusion_matrix': array([[55446,     2],
+       [    7,  3705]]), 'precision': 0.9994604801726463, 'recall': 0.998114224137931}
+EarlyStopping 9 / 18 counter: 6 out of 5
+[20200103T214303] CV 3 Epoch 10
+	Train loss: 1.6768096884334227e-06	Valid loss: 1.3465455594996456e-06	1.2452677488327026
+	 {'auc': 0.9999783600447016, 'confusion_matrix': array([[55446,     2],
+       [    7,  3705]]), 'precision': 0.9994604801726463, 'recall': 0.998114224137931}
+EarlyStopping 10 / 18 counter: 7 out of 5
+[20200103T214529] CV 3 Epoch 11
+	Train loss: 0.00039617385482415557	Valid loss: 2.901078310912908e-08	13656.08984375
+	 {'auc': 0.9999800313838625, 'confusion_matrix': array([[55375,    73],
+       [    0,  3712]]), 'precision': 0.9807133421400264, 'recall': 1.0}
+EarlyStopping 11 / 18 counter: 8 out of 5
+[20200103T214755] CV 3 Epoch 12
+	Train loss: 2.0469165065151174e-06	Valid loss: 5.378114451559668e-07	3.806011438369751
+	 {'auc': 0.9999782288640118, 'confusion_matrix': array([[55445,     3],
+       [    4,  3708]]), 'precision': 0.9991915925626516, 'recall': 0.9989224137931034}
+EarlyStopping 12 / 18 counter: 9 out of 5
+[20200103T215022] CV 3 Epoch 13
+	Train loss: 1.3217861578596057e-06	Valid loss: 1.0950032702794488e-07	12.071070671081543
+	 {'auc': 0.9999806435604157, 'confusion_matrix': array([[55445,     3],
+       [    5,  3707]]), 'precision': 0.9991913746630727, 'recall': 0.9986530172413793}
+EarlyStopping 13 / 18 counter: 10 out of 5
+[20200103T215248] CV 3 Epoch 14
+	Train loss: 1.2752614111377625e-06	Valid loss: 6.296550054685213e-07	2.0253336429595947
+	 {'auc': 0.9999779907953522, 'confusion_matrix': array([[55441,     7],
+       [    4,  3708]]), 'precision': 0.9981157469717362, 'recall': 0.9989224137931034}
+EarlyStopping 14 / 18 counter: 11 out of 5
+[20200103T215514] CV 3 Epoch 15
+	Train loss: 1.4356447763930191e-06	Valid loss: 6.694337457702204e-07	2.1445658206939697
+	 {'auc': 0.9999787633038597, 'confusion_matrix': array([[55445,     3],
+       [    4,  3708]]), 'precision': 0.9991915925626516, 'recall': 0.9989224137931034}
+EarlyStopping 15 / 18 counter: 12 out of 5
+[20200103T215740] CV 3 Epoch 16
+	Train loss: 7.06822049778566e-07	Valid loss: 4.0353671693083015e-07	1.751568078994751
+	 {'auc': 0.9999787875965801, 'confusion_matrix': array([[55439,     9],
+       [    4,  3708]]), 'precision': 0.9975786924939467, 'recall': 0.9989224137931034}
+EarlyStopping 16 / 18 counter: 13 out of 5
+[20200103T220007] CV 3 Epoch 17
+	Train loss: 4.240603630023543e-06	Valid loss: 1.108952801587293e-06	3.8239712715148926
+	 {'auc': 0.999978044239337, 'confusion_matrix': array([[55443,     5],
+       [    5,  3707]]), 'precision': 0.9986530172413793, 'recall': 0.9986530172413793}
+EarlyStopping 17 / 18 counter: 14 out of 5
+[20200103T220233] CV 3 Epoch 18
+	Train loss: 1.4250566664486541e-06	Valid loss: 2.8481750291575736e-07	5.0034027099609375
+	 {'auc': 0.9999792685924432, 'confusion_matrix': array([[55442,     6],
+       [    4,  3708]]), 'precision': 0.9983844911147012, 'recall': 0.9989224137931034}
+EarlyStopping 18 / 18 counter: 15 out of 5
+[20200103T220459] CV 3 Epoch 19
+	Train loss: 8.193786129595537e-07	Valid loss: 4.397936947952985e-08	18.630977630615234
+	 {'auc': 0.9999809690828686, 'confusion_matrix': array([[55443,     5],
+       [    1,  3711]]), 'precision': 0.998654467168999, 'recall': 0.9997306034482759}
+EarlyStopping 19 / 18 counter: 16 out of 5
+	Early stopping epoch 19, valid loss 4.397936947952985e-08
+
+Best_Epoch 3
+END<valid> CV 3 eval summary
+ {'auc': 0.9999994814714848, 'confusion_matrix': array([[55444,     4],
+       [    4,  3648]]), 'precision': 0.9989047097480832, 'recall': 0.9989047097480832}
+END<train> CV 3 eval summary
+ {'auc': 0.9999990406513134, 'confusion_matrix': array([[221739,     13],
+       [     9,  14939]]), 'precision': 0.9991305510968432, 'recall': 0.9993979127642494}
+train_auc - valid_auc: -4.4082017136570784e-07
+morphs_256_idx 8437 smishing
+morphs_256_idx 8437 smishing
+236757 59188
+
+CV 4
+model_ts 20200103T220539
+Epoch: 1
+HBox(children=(IntProgress(value=0, description='CV 4 Epoch', style=ProgressStyle(description_width='initial')), HTML(value='')))
+[20200103T220806] CV 4 Epoch 1
+	Train loss: 3.206183828297071e-05	Valid loss: 0.00010483331425348297	0.30583634972572327
+	 {'auc': 0.9999547603032872, 'confusion_matrix': array([[55214,   213],
+       [    4,  3729]]), 'precision': 0.9459665144596652, 'recall': 0.998928475756764}
+Validation loss decreased (inf --> -0.99995476).  Saving model ...
+[20200103T221032] CV 4 Epoch 2
+	Train loss: 1.6152558600879274e-05	Valid loss: 7.161925896070898e-05	0.22553372383117676
+	 {'auc': 0.9999364599868934, 'confusion_matrix': array([[55227,   200],
+       [    5,  3728]]), 'precision': 0.9490835030549898, 'recall': 0.998660594695955}
+EarlyStopping 2 / 18 counter: 1 out of 5
+[20200103T221258] CV 4 Epoch 3
+	Train loss: 1.5551704564131796e-05	Valid loss: 5.586325187323382e-06	2.783888101577759
+	 {'auc': 0.9999690781924504, 'confusion_matrix': array([[55412,    15],
+       [    6,  3727]]), 'precision': 0.995991448423303, 'recall': 0.998392713635146}
+Validation loss decreased (-0.99995476 --> -0.99996908).  Saving model ...
+[20200103T221524] CV 4 Epoch 4
+	Train loss: 7.267773526109522e-06	Valid loss: 0.00023410574067384005	0.03104483336210251
+	 {'auc': 0.999976419584396, 'confusion_matrix': array([[55413,    14],
+       [   11,  3722]]), 'precision': 0.9962526766595289, 'recall': 0.997053308331101}
+Validation loss decreased (-0.99996908 --> -0.99997642).  Saving model ...
+[20200103T221750] CV 4 Epoch 5
+	Train loss: 9.24392315937439e-06	Valid loss: 9.778952517081052e-05	0.09452876448631287
+	 {'auc': 0.9999372332737344, 'confusion_matrix': array([[55417,    10],
+       [    8,  3725]]), 'precision': 0.9973226238286479, 'recall': 0.997856951513528}
+EarlyStopping 5 / 18 counter: 1 out of 5
+[20200103T222016] CV 4 Epoch 6
+	Train loss: 1.0212625056738034e-05	Valid loss: 1.5571573385386728e-05	0.6558505296707153
+	 {'auc': 0.9999379437310194, 'confusion_matrix': array([[55325,   102],
+       [    6,  3727]]), 'precision': 0.9733611909114651, 'recall': 0.998392713635146}
+EarlyStopping 6 / 18 counter: 2 out of 5
+[20200103T222243] CV 4 Epoch 7
+	Train loss: 1.649462865316309e-05	Valid loss: 1.4043944247532636e-05	1.1745011806488037
+	 {'auc': 0.9999631166342113, 'confusion_matrix': array([[55411,    16],
+       [    9,  3724]]), 'precision': 0.9957219251336898, 'recall': 0.9975890704527189}
+EarlyStopping 7 / 18 counter: 3 out of 5
+[20200103T222509] CV 4 Epoch 8
+	Train loss: 1.2895067811768968e-05	Valid loss: 7.861394806241151e-06	1.6403027772903442
+	 {'auc': 0.9999533176400247, 'confusion_matrix': array([[55409,    18],
+       [    8,  3725]]), 'precision': 0.9951910232433877, 'recall': 0.997856951513528}
+EarlyStopping 8 / 18 counter: 4 out of 5
+[20200103T222735] CV 4 Epoch 9
+	Train loss: 1.0080807442136575e-06	Valid loss: 3.4061597489198903e-06	0.29595816135406494
+	 {'auc': 0.9999697306532223, 'confusion_matrix': array([[55403,    24],
+       [    6,  3727]]), 'precision': 0.9936017062116769, 'recall': 0.998392713635146}
+EarlyStopping 9 / 18 counter: 5 out of 5
+[20200103T223002] CV 4 Epoch 10
+	Train loss: 1.5045262671264936e-06	Valid loss: 2.9621801331813913e-06	0.5079118013381958
+	 {'auc': 0.9999423466329698, 'confusion_matrix': array([[55285,   142],
+       [    5,  3728]]), 'precision': 0.9633074935400516, 'recall': 0.998660594695955}
+EarlyStopping 10 / 18 counter: 6 out of 5
+[20200103T223228] CV 4 Epoch 11
+	Train loss: 2.144533709724783e-06	Valid loss: 5.790194563815021e-07	3.703733444213867
+	 {'auc': 0.9999630803863908, 'confusion_matrix': array([[55408,    19],
+       [    5,  3728]]), 'precision': 0.9949292767547371, 'recall': 0.998660594695955}
+EarlyStopping 11 / 18 counter: 7 out of 5
+[20200103T223454] CV 4 Epoch 12
+	Train loss: 1.1493170859466773e-06	Valid loss: 2.16054763768625e-06	0.5319563746452332
+	 {'auc': 0.9999757477914529, 'confusion_matrix': array([[55416,    11],
+       [    6,  3727]]), 'precision': 0.9970572498662387, 'recall': 0.998392713635146}
+EarlyStopping 12 / 18 counter: 8 out of 5
+[20200103T223720] CV 4 Epoch 13
+	Train loss: 9.291293281421531e-07	Valid loss: 0.0006340225227177143	0.0014654515543952584
+	 {'auc': 0.9995577403400512, 'confusion_matrix': array([[55421,     6],
+       [   24,  3709]]), 'precision': 0.9983849259757739, 'recall': 0.993570854540584}
+EarlyStopping 13 / 18 counter: 9 out of 5
+[20200103T223947] CV 4 Epoch 14
+	Train loss: 1.0484536687727086e-06	Valid loss: 1.5063025784911588e-05	0.06960445642471313
+	 {'auc': 0.9999946304894987, 'confusion_matrix': array([[55419,     8],
+       [    6,  3727]]), 'precision': 0.9978580990629183, 'recall': 0.998392713635146}
+Validation loss decreased (-0.99997642 --> -0.99999463).  Saving model ...
+[20200103T224213] CV 4 Epoch 15
+	Train loss: 5.704996510758065e-07	Valid loss: 8.32813821034506e-05	0.0068502663634717464
+	 {'auc': 0.9999910395387313, 'confusion_matrix': array([[55419,     8],
+       [    7,  3726]]), 'precision': 0.9978575254418853, 'recall': 0.998124832574337}
+EarlyStopping 15 / 18 counter: 1 out of 5
+[20200103T224439] CV 4 Epoch 16
+	Train loss: 1.216301939166442e-06	Valid loss: 4.446195816854015e-06	0.27356013655662537
+	 {'auc': 0.9999950751294322, 'confusion_matrix': array([[55417,    10],
+       [    7,  3726]]), 'precision': 0.9973233404710921, 'recall': 0.998124832574337}
+Validation loss decreased (-0.99999463 --> -0.99999508).  Saving model ...
+[20200103T224706] CV 4 Epoch 17
+	Train loss: 5.783012397841958e-07	Valid loss: 1.6801650417619385e-06	0.34419310092926025
+	 {'auc': 0.9999909622100471, 'confusion_matrix': array([[55402,    25],
+       [    6,  3727]]), 'precision': 0.9933368869936035, 'recall': 0.998392713635146}
+EarlyStopping 17 / 18 counter: 1 out of 5
+[20200103T224932] CV 4 Epoch 18
+	Train loss: 1.7010031569952844e-06	Valid loss: 6.890418262628373e-07	2.4686501026153564
+	 {'auc': 0.9999690612768007, 'confusion_matrix': array([[55358,    69],
+       [    5,  3728]]), 'precision': 0.9818277587569133, 'recall': 0.998660594695955}
+EarlyStopping 18 / 18 counter: 2 out of 5
+[20200103T225158] CV 4 Epoch 19
+	Train loss: 5.751861067437858e-07	Valid loss: 5.54801408725325e-06	0.10367423295974731
+	 {'auc': 0.9999067005261265, 'confusion_matrix': array([[55281,   146],
+       [    3,  3730]]), 'precision': 0.9623323013415893, 'recall': 0.999196356817573}
+EarlyStopping 19 / 18 counter: 3 out of 5
+[20200103T225424] CV 4 Epoch 20
+	Train loss: 2.2325552606616839e-07	Valid loss: 1.730485763573597e-07	1.2901321649551392
+	 {'auc': 0.9999771348747237, 'confusion_matrix': array([[55405,    22],
+       [    6,  3727]]), 'precision': 0.9941317684715925, 'recall': 0.998392713635146}
+EarlyStopping 20 / 18 counter: 4 out of 5
+[20200103T225650] CV 4 Epoch 21
+	Train loss: 7.306574616450234e-07	Valid loss: 2.075567522297206e-07	3.520277976989746
+	 {'auc': 0.9999684740621059, 'confusion_matrix': array([[55403,    24],
+       [    6,  3727]]), 'precision': 0.9936017062116769, 'recall': 0.998392713635146}
+EarlyStopping 21 / 18 counter: 5 out of 5
+	Early stopping epoch 21, valid loss 2.075567522297206e-07
+
+Best_Epoch 16
+END<valid> CV 4 eval summary
+ {'auc': 0.9999950779948508, 'confusion_matrix': array([[55370,    10],
+       [    7,  3713]]), 'precision': 0.997313994090787, 'recall': 0.9981182795698925}
+END<train> CV 4 eval summary
+ {'auc': 1.0, 'confusion_matrix': array([[221794,      0],
+       [     0,  14906]]), 'precision': 1.0, 'recall': 1.0}
+train_auc - valid_auc: 4.922005149232689e-06
+5
+0.5385627150535583 1.0727056178438943e-05 0.02095424383878708
+smishing_0
+Traceback (most recent call last):
+  File "torch_v3.py", line 522, in <module>
+    display((df_test[c] * 10).astype(int).value_counts(sort=False))
+NameError: name 'display' is not defined
+
+
+
+
+
