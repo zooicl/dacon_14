@@ -55,7 +55,7 @@ sudo apt-get -y install python-pip
 sudo -H pip install setuptools numpy scipy scikit-learn -U
 cd ..
 cd ~/
-cd LightGBM/python-package
+cd LightGBM/python-torch_design
 sudo python setup.py install --precompile
 
 
