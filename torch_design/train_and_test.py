@@ -1,6 +1,39 @@
 import numpy as np
+import pandas as pd
 import torch
-from torch.utils.data import DataLoader
+from torch.utils.data import Dataset, DataLoader
+
+
+class KBDataset(Dataset):
+    def __init__(self, df, y_col, fc_cols, seq_cols):
+        self.fc_cols = fc_cols
+        self.seq_cols = seq_cols
+
+        self.fc_X = None
+        if fc_cols:
+            self.fc_X = df[fc_cols].values
+
+        self.seq_X = []
+        for c in seq_cols:
+            self.seq_X.append(np.stack(df[c].values))
+
+        self.y = pd.get_dummies(df[y_col].astype(int), prefix=y_col).values
+
+    def __len__(self):
+        return len(self.y)
+
+    def get_feature_names(self):
+        return [self.fc_cols] + [self.seq_cols]
+
+    def __getitem__(self, idx):
+        X_batch_list = []
+        if self.fc_X:
+            X_batch_list.append(self.fc_X[idx].astype(np.float32))
+
+        for seq in self.seq_X:
+            X_batch_list.append(seq[idx].astype(np.int64))
+
+        return X_batch_list, self.y[idx].astype(np.float32)
 
 
 def train_torch(model, dataset, criterion, optimizer, scheduler, device, step=100, num_workers=3):
@@ -22,7 +55,7 @@ def train_torch(model, dataset, criterion, optimizer, scheduler, device, step=10
 
         y_batch = y_batch.to(device)
 
-        y_pred = model(X_batch_list)
+        y_pred = model(*X_batch_list)
 
         loss = criterion(y_pred, y_batch)
 
@@ -63,7 +96,7 @@ def test_torch(model, dataset, criterion, device, step=100, num_workers=3):
         y_true_list.append(y_true[:, 1].cpu().detach().numpy())
 
         with torch.no_grad():
-            y_pred = model(X_batch_list)
+            y_pred = model(*X_batch_list)
             loss = criterion(y_pred, y_batch)
             loss += loss.item()
             acc += (y_pred.argmax(1) == y_batch.argmax(1)).sum().item()

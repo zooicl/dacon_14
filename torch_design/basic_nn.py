@@ -25,28 +25,28 @@ class NN_Model(torch.nn.Module):
         self.fc.add_module(f'hidden_last', torch.nn.Linear(hidden_layers[-1], 2))
 
     def forward(self, x):
-        return self.fc(x[0])
+        return self.fc(x)
 
 
-class NN_Dataset(Dataset):
-    def __init__(self, df, y_col):
-        self.cols = [c for c in df.columns if c not in [y_col]]
-        self.X = df[self.cols].values
-        self.y = pd.get_dummies(df[y_col].astype(int), prefix=y_col).values
-
-    def __len__(self):
-        return len(self.X)
-
-    def get_feature_names(self):
-        return self.cols
-
-    def __getitem__(self, idx):
-        X = self.X[idx].astype(np.float32)
-        y = self.y[idx].astype(np.float32)
-
-        #         print(X.shape, X_seq.shape, y.shape)
-        return [X], y
+# class NN_Dataset(Dataset):
+#     def __init__(self, df, y_col):
+#         self.cols = [c for c in df.columns if c not in [y_col]]
+#         self.X = df[self.cols].values
+#         self.y = pd.get_dummies(df[y_col].astype(int), prefix=y_col).values
 #
+#     def __len__(self):
+#         return len(self.X)
+#
+#     def get_feature_names(self):
+#         return self.cols
+#
+#     def __getitem__(self, idx):
+#         X = self.X[idx].astype(np.float32)
+#         y = self.y[idx].astype(np.float32)
+#
+#         #         print(X.shape, X_seq.shape, y.shape)
+#         return [X], y
+# #
 #
 # def train_torch(model, dataset, criterion, optimizer, scheduler, device, step=100, num_workers=3):
 #     model.train()
