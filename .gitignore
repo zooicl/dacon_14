@@ -131,6 +131,7 @@ dmypy.json
 /input
 /data
 /submit
+/model
 *.csv
 *.pkl
 *.model
